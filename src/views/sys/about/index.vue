@@ -1,11 +1,12 @@
 <template>
-  <PageWrapper title="关于">
+  <PageWrapper title="About">
     <template #headerContent>
       <div class="flex justify-between items-center">
         <span class="flex-1">
           <a :href="GITHUB_URL" target="_blank">{{ name }}</a>
-          是一个基于Vue3.0、Vite、 Ant-Design-Vue 、TypeScript
-          的后台解决方案，目标是为中大型项目开发,提供现成的开箱解决方案及丰富的示例,原则上不会限制任何代码用于商用。
+          It is based on Vue3.0, Vite, Ant-Design-Vue, TypeScript The backend solution aims to
+          provide ready-made out-of-the-box solutions and rich examples for medium and large-scale
+          project development. In principle, it will not restrict any code for commercial use.
         </span>
       </div>
     </template>
@@ -33,22 +34,22 @@
 
   const infoSchema: DescItem[] = [
     {
-      label: '版本',
+      label: 'Version',
       field: 'version',
       render: commonTagRender('blue'),
     },
     {
-      label: '最后编译时间',
+      label: 'Last compile time',
       field: 'lastBuildTime',
       render: commonTagRender('blue'),
     },
     {
-      label: '文档地址',
+      label: 'Document address',
       field: 'doc',
       render: commonLinkRender('文档地址'),
     },
     {
-      label: '预览地址',
+      label: 'Preview address',
       field: 'preview',
       render: commonLinkRender('预览地址'),
     },
@@ -76,21 +77,21 @@
   });
 
   const [register] = useDescription({
-    title: '生产环境依赖',
+    title: 'Prod env dependencies',
     data: dependencies,
     schema: schema,
     column: 3,
   });
 
   const [registerDev] = useDescription({
-    title: '开发环境依赖',
+    title: 'Dev env dependencies',
     data: devDependencies,
     schema: devSchema,
     column: 3,
   });
 
   const [infoRegister] = useDescription({
-    title: '项目信息',
+    title: 'Project info',
     data: infoData,
     schema: infoSchema,
     column: 2,
