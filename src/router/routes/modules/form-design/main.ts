@@ -9,14 +9,14 @@ const permission: AppRouteModule = {
   meta: {
     orderNo: 10000,
     icon: 'ion:build-outline',
-    title: '表单设计',
+    title: 'Form design',
   },
   children: [
     {
       path: 'design',
       name: 'Design',
       meta: {
-        title: '表单设计',
+        title: 'Form design',
       },
       component: () => import('/@/views/form-design/index.vue'),
     },
@@ -24,7 +24,7 @@ const permission: AppRouteModule = {
       path: 'example1',
       name: 'Example1',
       meta: {
-        title: '示例',
+        title: 'Example',
       },
       component: () => import('/@/views/form-design/examples/baseForm.vue'),
     },

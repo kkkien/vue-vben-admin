@@ -11,7 +11,7 @@
       }"
       breakpoint="md"
     >
-      <CollapseContainer title="基础控件">
+      <CollapseContainer title="Basic controls">
         <CollapseItem
           :list="baseComponents"
           :handleListPush="handleListPushDrag"
@@ -19,7 +19,7 @@
           @handle-list-push="handleListPush"
         />
       </CollapseContainer>
-      <CollapseContainer title="自定义控件">
+      <CollapseContainer title="Custom control">
         <CollapseItem
           :list="customComponents"
           @add-attrs="handleAddAttrs"
@@ -27,7 +27,7 @@
           @handle-list-push="handleListPush"
         />
       </CollapseContainer>
-      <CollapseContainer title="布局控件">
+      <CollapseContainer title="Layout controls">
         <CollapseItem
           :list="layoutComponents"
           :handleListPush="handleListPushDrag"
@@ -105,6 +105,7 @@
   import { useDesign } from '/@/hooks/web/useDesign';
 
   import { CollapseContainer } from '/@/components/Container/index';
+
   defineProps({
     title: {
       type: String,
