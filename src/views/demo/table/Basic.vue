@@ -15,14 +15,14 @@
     >
       <template #toolbar>
         <a-button type="primary" @click="toggleCanResize">
-          {{ !canResize ? '自适应高度' : '取消自适应' }}
+          {{ !canResize ? 'Adaptive height' : 'Cancel adaptive' }}
         </a-button>
         <a-button type="primary" @click="toggleBorder">
-          {{ !border ? '显示边框' : '隐藏边框' }}
+          {{ !border ? 'Show frame' : 'Hide border' }}
         </a-button>
-        <a-button type="primary" @click="toggleLoading"> 开启loading </a-button>
+        <a-button type="primary" @click="toggleLoading"> Open loading </a-button>
         <a-button type="primary" @click="toggleStriped">
-          {{ !striped ? '显示斑马纹' : '隐藏斑马纹' }}
+          {{ !striped ? 'Show zebra' : 'Hide zebra' }}
         </a-button>
       </template>
     </BasicTable>

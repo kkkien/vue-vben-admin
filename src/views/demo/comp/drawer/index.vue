@@ -5,7 +5,7 @@
 
     <Alert message="内外同时控制显示隐藏" show-icon />
     <a-button type="primary" class="my-4" @click="openDrawer2(true)"> 打开Drawer </a-button>
-    <Alert message="自适应高度/显示footer" show-icon />
+    <Alert message="Adaptive height/显示footer" show-icon />
     <a-button type="primary" class="my-4" @click="openDrawer3(true)"> 打开Drawer </a-button>
 
     <Alert message="内外数据交互" show-icon />
