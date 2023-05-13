@@ -232,7 +232,7 @@ function createAxios(opt?: Partial<CreateAxiosOptions>) {
         // authenticationScheme: 'Bearer',
         authenticationScheme: '',
         timeout: 10 * 1000,
-        // 基础接口地址
+        // Basic interface address
         // baseURL: globSetting.apiUrl,
 
         headers: { 'Content-Type': ContentTypeEnum.JSON },

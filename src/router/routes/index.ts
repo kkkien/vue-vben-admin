@@ -7,7 +7,7 @@ import { PageEnum } from '/@/enums/pageEnum';
 import { t } from '/@/hooks/web/useI18n';
 
 // import.meta.globEager() 直接引入所有的模块 Vite 独有的功能
-const modules = import.meta.globEager('./modules/**/*.ts');
+const modules = import.meta.globEager('./module/**/*.ts');
 const routeModuleList: AppRouteModule[] = [];
 
 // 加入到路由集合中
@@ -16,6 +16,16 @@ Object.keys(modules).forEach((key) => {
   const modList = Array.isArray(mod) ? [...mod] : [mod];
   routeModuleList.push(...modList);
 });
+
+// KIENAN: FOR DEMO PURPOSE
+const demoModules = import.meta.globEager('./modules/**/*.ts');
+Object.keys(demoModules).forEach((key) => {
+  const mod = demoModules[key].default || {};
+  const modList = Array.isArray(mod) ? [...mod] : [mod];
+  // REM DÒNG NÀY CHẠY PRODUCTION
+  routeModuleList.push(...modList);
+});
+// KIENAN.
 
 export const asyncRoutes = [PAGE_NOT_FOUND_ROUTE, ...routeModuleList];
 
