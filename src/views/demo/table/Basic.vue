@@ -1,8 +1,8 @@
 <template>
   <div class="p-4">
     <BasicTable
-      title="基础示例"
-      titleHelpMessage="温馨提醒"
+      title="Basic example"
+      titleHelpMessage="Reminder"
       :columns="columns"
       :dataSource="data"
       :canResize="canResize"

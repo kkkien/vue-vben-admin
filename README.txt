@@ -27,6 +27,13 @@ menu: Component - Table - Tree
 url: http://localhost:5173/#/comp/table/treeTable
 => ko get data từ mock, dùng data từ src\views\demo\table\tableData.tsx
 
+src\views\demo\table\Basic.vue -> call getBasicData(), getBasicColumns() từ -> src\views\demo\table\tableData.tsx
+  -> trong Basic.vue, template dùng columns, data và trong function defineComponent() sẽ return columns, data, đc lấy ra từ tableData.tsx
+    -> ở đây, trong getBasicData() của Basic.vue, edit code lại dùng axios request data từ server
+
+src\views\demo\table\VxeTable.vue
+  -> get data: src\api\demo\table.ts -> demoListApi()
+
 =========================================================
 chỗ nào từ UI call tới api port 5173, dùng port khác thay 5173 cho server data thế nào?
   - .env.production hoặc .env.development -> khai báo: VITE_GLOB_API_URL=/basic-api

@@ -1,7 +1,7 @@
 <template>
   <PageWrapper
-    title="VxeTable表格"
-    content="只展示部分操作，详细功能请查看VxeTable官网事例"
+    title="VxeTable form"
+    content="Only part of the operations are shown, please refer to the VxeTable official website case for detailed functions"
     contentFullHeight
     fixedHeight
   >
@@ -33,7 +33,7 @@
     toolbarConfig: {
       buttons: [
         {
-          content: '在第一行新增',
+          content: 'Add on the first line',
           buttonRender: {
             name: 'AButton',
             props: {
@@ -42,14 +42,14 @@
             },
             events: {
               click: () => {
-                tableRef.value?.insert({ name: '新增的' });
-                createMessage.success('新增成功');
+                tableRef.value?.insert({ name: 'Newly added' });
+                createMessage.success('Added successfully');
               },
             },
           },
         },
         {
-          content: '在最后一行新增',
+          content: 'In the last line add',
           buttonRender: {
             name: 'AButton',
             props: {
@@ -57,7 +57,7 @@
             },
             events: {
               click: () => {
-                tableRef.value?.insertAt({ name: '新增的' }, -1);
+                tableRef.value?.insertAt({ name: 'Newly added' }, -1);
               },
             },
           },
@@ -85,24 +85,24 @@
     },
   });
 
-  // 操作按钮（权限控制）
+  // Action Button (Access Control)
   const createActions = (record) => {
     const actions: ActionItem[] = [
       {
-        label: '详情',
+        label: 'Deta',
         onClick: () => {
           console.log(record);
         },
       },
       {
-        label: '编辑',
+        label: 'Edit',
         onClick: () => {},
       },
       {
-        label: '删除',
+        label: 'Del',
         color: 'error',
         popConfirm: {
-          title: '是否确认删除',
+          title: 'Are you sure to delete?',
           confirm: () => {
             tableRef.value?.remove(record);
           },

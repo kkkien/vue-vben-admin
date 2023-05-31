@@ -1,14 +1,14 @@
 <template>
-  <PageWrapper title="Tree基础示例">
+  <PageWrapper title="Tree basic example">
     <Row :gutter="[16, 16]">
       <Col :span="8">
-        <BasicTree title="基础示例，默认展开第一层" :treeData="treeData" defaultExpandLevel="1">
+        <BasicTree title="Basic example, the first layer is expanded by default" :treeData="treeData" defaultExpandLevel="1">
           <template #title> 123123 </template>
         </BasicTree>
       </Col>
       <Col :span="8">
         <BasicTree
-          title="可勾选，默认全部展开"
+          title="Can be checked, all are expanded by default"
           :treeData="treeData"
           :checkable="true"
           defaultExpandAll
@@ -17,7 +17,7 @@
       </Col>
       <Col :span="8">
         <BasicTree
-          title="指定默认展开/勾选示例"
+          title="Specify default expand/tick example"
           :treeData="treeData"
           :checkable="true"
           :expandedKeys="['0-0']"
@@ -26,7 +26,7 @@
       </Col>
       <Col :span="8">
         <BasicTree
-          title="懒加载异步树"
+          title="Lazy loading async trees"
           ref="asyncTreeRef"
           :treeData="tree"
           :load-data="onLoadData"

@@ -2,8 +2,8 @@
   <div class="p-4">
     <BasicTable @register="register">
       <template #toolbar>
-        <a-button type="primary" @click="expandAll">展开全部</a-button>
-        <a-button type="primary" @click="collapseAll">折叠全部</a-button>
+        <a-button type="primary" @click="expandAll">Expand All</a-button>
+        <a-button type="primary" @click="collapseAll">Collapse all</a-button>
       </template>
     </BasicTable>
   </div>
@@ -17,7 +17,7 @@
     components: { BasicTable },
     setup() {
       const [register, { expandAll, collapseAll }] = useTable({
-        title: '树形表格',
+        title: 'Tree form',
         isTreeTable: true,
         rowSelection: {
           type: 'checkbox',

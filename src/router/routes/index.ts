@@ -6,7 +6,7 @@ import { mainOutRoutes } from './mainOut';
 import { PageEnum } from '/@/enums/pageEnum';
 import { t } from '/@/hooks/web/useI18n';
 
-// import.meta.globEager() 直接引入所有的模块 Vite 独有的功能
+// import.meta.globEager() Direct import of all modules Vite unique functions
 const modules = import.meta.globEager('./module/**/*.ts');
 const routeModuleList: AppRouteModule[] = [];
 

@@ -1,7 +1,7 @@
 <template>
   <PageWrapper title="Tree函数操作示例" contentBackground contentClass="p-4">
     <div class="mb-4">
-      <a-button @click="expandAll(true)" class="mr-2"> 展开全部 </a-button>
+      <a-button @click="expandAll(true)" class="mr-2"> Expand All </a-button>
       <a-button @click="expandAll(false)" class="mr-2"> 折叠全部 </a-button>
       <a-button @click="checkAll(true)" class="mr-2"> 全选 </a-button>
       <a-button @click="checkAll(false)" class="mr-2"> 全不选 </a-button>
